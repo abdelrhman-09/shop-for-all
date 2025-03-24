@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CartoonCo - Fun & Creative Solutions</title>
+  <style>
+    /* === GLOBAL STYLES (CARTOONISH THEME) === */
+    :root {
+      --blue: #3498db;
+      --red: #e74c3c;
+      --black: #2c3e50;
+      --white: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Comic Neue', cursive;
+      margin: 0;
+      background: var(--white);
+      color: var(--black);
+      scroll-behavior: smooth; /* Smooth scrolling */
+    }
+
+    /* === HEADER (STICKY & CARTOONISH) === */
+    header {
+      background: var(--blue);
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: white;
+      text-shadow: 2px 2px 0 var(--red);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      padding: 0.5rem;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: var(--red);
+      transform: scale(1.1);
+    }
+
+    /* === HERO SECTION (BIG & BOLD) === */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, var(--blue), #5dade2);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 3px 3px 0 var(--red);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+
+    /* === SHOP/WORK SHOWCASE === */
+    .shop {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .shop h2 {
+      color: var(--red);
+      font-size: 2.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      border: 4px solid var(--blue);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05) rotate(5deg);
+      border-color: var(--red);
+    }
+
+    /* === CONTACT PAGE === */
+    .contact {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .contact h2 {
+      color: var(--red);
+      font-size: 2.5rem;
+    }
+
+    .discord-link img {
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      transition: transform 0.3s;
+    }
+
+    .discord-link img:hover {
+      transform: scale(1.1);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--black);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* === RESPONSIVE DESIGN === */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Replace with hamburger menu in JS */
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">shop for all</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#shop">Our Work</a>
+        <a href="#contact">Contact</a> <!-- Link to contact section -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <h1>We Make Magic Happen!</h1>
+    <p>Fun, creative, and powerful solutions for your business.</p>
+  </section>
+
+  <!-- SHOP/WORK SHOWCASE -->
+  <section class="shop" id="shop">
+    <h2>what we sell?</h2>
+    <div class="gallery">
+      <img src="https://placehold.co/400x300/2c3e50/white?text=discord users" alt="تصاميم انمي">
+      <img src="https://placehold.co/400x300/2c3e50/white?text=servers" alt="برمجة بوتات">
+      <img src="https://placehold.co/400x300/2c3e50/white?text=nitro" alt="بيع طرق">
+      <img src="https://placehold.co/400x300/2c3e50/white?text=bots program" alt="متاجر نايترو">
+    </div>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Feel free to reach out via our Discord community or send us a message.</p>
+    <div class="discord-link">
+      <a href="https://discord.com" target="_blank">
+        <!-- Updated Discord logo -->
+        <img src="data:image/png;base64,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" alt="Discord Logo">
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 CartoonCo | Let’s build something fun!</p>
+  </footer>
+
+  <!-- JS FILE LINK -->
+  <script src="script.js"></script>
+</body>
+</html>
